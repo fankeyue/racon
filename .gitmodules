@@ -19,3 +19,7 @@
 [submodule "vendor/ClaraGenomicsAnalysis"]
 	path = vendor/ClaraGenomicsAnalysis
 	url = https://github.com/clara-genomics/ClaraGenomicsAnalysis
+[submodule "vendor/intervaltree"]
+	path = vendor/intervaltree
+	url = https://github.com/ekg/intervaltree.git
+	branch = master
