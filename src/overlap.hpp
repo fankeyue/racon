@@ -6,11 +6,12 @@
 
 #pragma once
 
-#include <stdlib.h>
-#include <stdint.h>
+#include <cstdlib>
+#include <cstdint>
 #include <memory>
 #include <vector>
 #include <string>
+#include <tuple>
 #include <utility>
 #include <unordered_map>
 
@@ -69,7 +70,7 @@ public:
         return error_;
     }
 
-    const std::vector<std::pair<uint32_t, uint32_t>>& breaking_points() const {
+    const std::vector<std::tuple<uint32_t, uint32_t, uint32_t>>& breaking_points() const {
         return breaking_points_;
     }
 
@@ -123,7 +124,7 @@ private:
 
     bool is_valid_;
     bool is_transmuted_;
-    std::vector<std::pair<uint32_t, uint32_t>> breaking_points_;
+    std::vector<std::tuple<uint32_t, uint32_t, uint32_t>> breaking_points_;
     std::vector<std::pair<uint32_t, uint32_t>> dual_breaking_points_;
 };
 
